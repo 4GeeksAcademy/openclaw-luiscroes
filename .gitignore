@@ -1,0 +1,25 @@
+# Credentials and environment variables
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+*credentials*
+*secrets*
+
+# Private agent information
+MEMORY.md
+memory/
+sessions/
+state/
+auth/
+*.sqlite
+*.sqlite-*
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+.DS_Store
