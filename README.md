@@ -157,8 +157,15 @@ openclaw-luiscroes/
 ├── BOOTSTRAP.md
 ├── IDENTITY.md
 ├── README.md
+├── SKILLS_DESIGN.md
 ├── SOUL.md
-└── USER.md
+├── TOOLS.md
+├── USER.md
+├── openclaw-connection/
+├── openclaw-skills/
+└── skills/
+    ├── learning-journal/SKILL.md
+    └── study-session-scheduler/SKILL.md
 ```
 
 ### File Descriptions
@@ -255,6 +262,40 @@ The project successfully demonstrates:
 - Version control and remote workspace backup.
 
 The resulting assistant, **Kai 🤖**, is operational on the VPS and ready for further configuration and experimentation.
+
+
+## Project 3: Teaching New Skills to Kai
+
+**Project:** Mi Agente, A Mi Manera: Enseñando Nuevas Skills a Tu Asistente Personal
+
+Kai went from a generic assistant to one configured for Luis, with two custom OpenClaw skills that remove weekly repetitive work. Only the services already connected were used (Telegram and two Zapier actions); no new API, OAuth flow or external service was added.
+
+### The five configuration files
+
+| File | What it now defines |
+|---|---|
+| [`IDENTITY.md`](./IDENTITY.md) | Kai 🤖, greeting and signature for longer outputs |
+| [`SOUL.md`](./SOUL.md) | Acts first on clear, reversible requests; asks one question only when a detail would change the result; states uncertainty; Spanish, brief and direct |
+| [`AGENTS.md`](./AGENTS.md) | Firm limits: privacy (no personal data outside the private chat, no secrets in files), stop-and-ask before sending to others, inviting, deleting or spending |
+| [`USER.md`](./USER.md) | Luis's context: Madrid time zone, work at Novalta, 4Geeks bootcamp, TrackFlow, goals and study hours |
+| [`TOOLS.md`](./TOOLS.md) | Telegram, Zapier *Create Document From Text* and *Create Detailed Event*, default calendar, naming conventions, reminders |
+
+### Skills
+
+Designed first in [`SKILLS_DESIGN.md`](./SKILLS_DESIGN.md) (committed before any implementation), then implemented as workspace skills:
+
+| Skill | Trigger | Result |
+|---|---|---|
+| [`learning-journal`](./skills/learning-journal/SKILL.md) | `Diario: ...` on Telegram | Structured learning-journal entry saved as a new Google Doc |
+| [`study-session-scheduler`](./skills/study-session-scheduler/SKILL.md) | `Agenda: ...` on Telegram | Complete study event in the `4Geeks OpenClaw Tests` calendar |
+
+**Why these two:** both are tasks repeated several times a week during the bootcamp; one creates new content and the other sharpens an existing behaviour; and both visibly depend on the five files (tone, projects, hours and defaults).
+
+### Verification
+
+- `openclaw skills list`: both skills **ready**, source `openclaw-workspace`.
+- `openclaw doctor --lint`: **0 errors** (3 non-blocking warnings, explained in the evidence notes).
+- Real tests from Telegram produced a Google Doc and a Calendar event; evidence in [`openclaw-skills/`](./openclaw-skills/notes.md).
 
 ---
 
