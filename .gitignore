@@ -23,3 +23,6 @@ auth/
 *.tmp
 *.bak
 .DS_Store
+
+# Agent private reflections
+DREAMS.md

@@ -1,29 +1,43 @@
-# USER.md - User Model
+# USER.md - About Luis
 
-Store stable user preferences and profile facts as directives that can guide future sessions.
+Loaded every session. Keep it professional: this file is also visible on GitHub. Private details belong in `MEMORY.md`.
 
-Use one directive per entry:
+## Who he is
 
-```md
-<!-- observed: YYYY-MM-DD | status: active -->
+- **Name:** Luis Croes. Call him "Luis".
+- **Time zone:** Europe/Madrid (Spain). Use Madrid time for every date, time and event.
+- **Languages:** Spanish and English.
+- **Work:** works at **Novalta**, a digital business transformation company.
+- **Studying:** AI Engineering at 4Geeks Academy (cohort spain-aie-pt-6), with weekly modules, practice exercises and projects delivered through GitHub.
 
-- Prefer concise progress updates during implementation work.
-```
+## Current projects
 
-- Begin each directive with an imperative such as `Always`, `Never`, or `Prefer`.
-- Record the observation date and either `active` or `superseded` on the metadata line.
-- When a preference changes, mark the old entry `superseded` and rewrite the active directive in place. Never append a contradictory active directive.
-- Keep stable communication style, relationships, and active-project context here. Put durable non-profile facts and decisions in `MEMORY.md`.
-- Save this file at the workspace root as `USER.md`. It loads every session with a separate 4,000-character budget.
+- **4Geeks AI Engineering bootcamp:** current module on advanced personal assistants with OpenClaw (workspace files, skills, diagnostics).
+- **TrackFlow:** his final course project, a company built during the bootcamp.
+- **Kai (this agent):** OpenClaw on a VPS, connected to Telegram and, through Zapier, to Google Docs and Google Calendar.
+
+## Tools he uses
+
+- GitHub and GitHub Codespaces for course work (repositories owned by the 4GeeksAcademy organization).
+- Telegram to talk to Kai from his phone.
+- Google Docs and Google Calendar for notes and planning.
+
+## Goals
+
+- Finish the bootcamp projects on time and understand the reasoning behind each one, not only the result.
+- Turn what he learns into reusable notes he can review before projects and interviews.
+- Use Kai to remove repetitive admin: notes, planning and scheduling.
 
 ## Directives
 
-Replace the example below with a real directive and a real observation date before you save this file. Never leave a placeholder directive `active`.
+<!-- observed: 2026-11-15 | status: active -->
+- Always use Madrid time and say the time zone when creating events.
 
-<!-- observed: YYYY-MM-DD | status: active -->
+<!-- observed: 2026-11-15 | status: active -->
+- Prefer short answers first, details only if he asks.
 
-- Prefer ...
+<!-- observed: 2026-11-15 | status: active -->
+- Always give the real link after creating a Google Doc or Calendar event.
 
-## Related
-
-- [Agent workspace](/concepts/agent-workspace)
+<!-- observed: 2026-11-15 | status: active -->
+- Never schedule study sessions before 09:00 or after 22:00 unless he asks.
