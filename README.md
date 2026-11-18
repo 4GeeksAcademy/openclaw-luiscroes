@@ -302,3 +302,20 @@ Designed first in [`SKILLS_DESIGN.md`](./SKILLS_DESIGN.md) (committed before any
 **Project:** Configurando tu Agente de IA Personal con OpenClaw  
 **Institution:** 4Geeks Academy  
 **GitHub:** [4GeeksAcademy/openclaw-luiscroes](https://github.com/4GeeksAcademy/openclaw-luiscroes)
+
+---
+
+## Mi Asistente 4Geeks — skills conectadas a la API de 4Geeks
+
+Kai puede consultar mi progreso en el curso de 4Geeks directamente desde Telegram. Las seis skills se construyeron conversando con Kai, una pregunta a la vez; todo el proceso, con los prompts, las propuestas de Kai y las pruebas reales, está en **[SKILL_LOG.md](./SKILL_LOG.md)**.
+
+| Skill | Pregunta | Endpoint |
+|---|---|---|
+| `authenticate-4geeks` | ¿Mi token es válido? | `GET /v1/admissions/user/me` |
+| `get-my-projects` | ¿Cuáles son mis proyectos y en qué estado están? | `GET /v1/assignment/user/me/task?task_type=PROJECT` |
+| `get-pending-work` | ¿Qué me falta por entregar? | `GET /v1/assignment/user/me/task?task_status=PENDING` |
+| `get-progress-summary` | ¿Qué tan avanzado estoy? | `GET /v1/assignment/user/me/task` |
+| `get-project-feedback` | ¿Qué feedback me dieron en X? | `GET /v1/assignment/task/{task_id}` |
+| `get-my-cohort` | ¿En qué cohorte estoy y cuándo termina? | `GET /v1/admissions/user/me` |
+
+**Seguridad:** el token de estudiante vive solo en `~/.openclaw/.env` del servidor (`TOKEN_4GEEKS`, permisos 600), fuera de este repositorio. Ninguna skill lo contiene, lo imprime ni lo guarda, y las respuestas de la API se procesan en memoria.

@@ -26,3 +26,8 @@ auth/
 
 # Agent private reflections
 DREAMS.md
+
+# Python cache y datos de la API (nunca se suben)
+__pycache__/
+*.pyc
+data/
